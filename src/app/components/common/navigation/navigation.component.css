@@ -1,4 +1,10 @@
 .sidebar-list-item{
-    padding-left: 1rem;
-    margin: 0;
+    position: relative;
+    padding: 0;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 48px;
+    width: 48px;
+    background: transparent;
 }

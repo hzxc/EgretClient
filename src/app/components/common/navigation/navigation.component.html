@@ -1,44 +1,52 @@
 <mat-nav-list role="list">
   <div *ngFor="let item of menuItems">
-      <mat-list-item 
-      class="sidebar-list-item" 
-      role="listitem"
-      *ngIf="!item.disabled && item.type !== 'separator' && item.type !== 'icon'"
-      [ngClass]="{'has-submenu': item.type === 'dropDown'}"
-      routerLinkActive="open">
-        <a routerLink="/{{item.state}}" *ngIf="item.type === 'link'">
-          <span
-          class="menu-item-tooltip" 
-          [matTooltip]="item.tooltip" 
-          matTooltipPosition="right"></span>
-          <mat-icon>{{item.icon}}</mat-icon>
-          <span>{{item.name}}</span>
-        </a>
-        <a *ngIf="item.type === 'dropDown'">
-          <span
-          class="menu-item-tooltip" 
-          [matTooltip]="item.tooltip" 
-          matTooltipPosition="above"></span>
-          <mat-icon>{{item.icon}}</mat-icon>
-          <span>{{item.name}}</span>
-          <span fxFlex></span>
-          <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
-        </a>
-        <a [href]="item.state" *ngIf="item.type === 'extLink'" target="_blank">
-          <span
-          class="menu-item-tooltip" 
-          [matTooltip]="item.tooltip" 
-          matTooltipPosition="right"></span>
-          <mat-icon>{{item.icon}}</mat-icon>
-          <span>{{item.name}}</span>
-        </a>
-        <mat-nav-list class="sub-menu" role="list" *ngIf="item.type === 'dropDown'">
-          <mat-list-item 
-          routerLinkActive="selected"
-          *ngFor="let subItem of item.sub">
-            <a routerLink="{{item.state ? '/'+item.state : ''}}/{{subItem.state}}">{{subItem.name}}</a>
-          </mat-list-item>
-        </mat-nav-list>
-      </mat-list-item>
+    <!-- if it's not desabled and not a separator and not icon -->
+    <mat-list-item 
+    sideNavAccordion 
+    class="sidebar-list-item" 
+    role="listitem"
+    *ngIf="!item.disabled && item.type !== 'separator' && item.type !== 'icon'"
+    [ngClass]="{'has-submenu': item.type === 'dropDown'}"
+    routerLinkActive="open">
+      <a routerLink="/{{item.state}}" *ngIf="item.type === 'link'">
+        <span
+        class="menu-item-tooltip" 
+        [matTooltip]="item.tooltip" 
+        matTooltipPosition="right"></span>
+        <mat-icon>{{item.icon}}</mat-icon>
+        <span>{{item.name}}</span>
+      </a>
+      <a *ngIf="item.type === 'dropDown'">
+        <span
+        class="menu-item-tooltip" 
+        [matTooltip]="item.tooltip" 
+        matTooltipPosition="above"></span>
+        <mat-icon>{{item.icon}}</mat-icon>
+        <span>{{item.name}}</span>
+        <span fxFlex></span>
+        <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
+      </a>
+      <a [href]="item.state" *ngIf="item.type === 'extLink'" target="_blank">
+        <span
+        class="menu-item-tooltip" 
+        [matTooltip]="item.tooltip" 
+        matTooltipPosition="right"></span>
+        <mat-icon>{{item.icon}}</mat-icon>
+        <span>{{item.name}}</span>
+      </a>
+      <mat-nav-list class="sub-menu" role="list" *ngIf="item.type === 'dropDown'">
+        <mat-list-item 
+        routerLinkActive="selected"
+        *ngFor="let subItem of item.sub">
+          <a routerLink="{{item.state ? '/'+item.state : ''}}/{{subItem.state}}">{{subItem.name}}</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-list-item>
+
+    <!-- If item type is separator -->
+    <div class="mt-1 mb-1" *ngIf="!item.disabled && item.type === 'separator'">
+      <mat-divider></mat-divider>
+      <span class="nav-section-title text-muted" *ngIf="!!item.name">{{item.name}}</span>
+    </div>
   </div>
 </mat-nav-list>
