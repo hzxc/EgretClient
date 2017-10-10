@@ -1,10 +1,13 @@
-.sidebar-list-item{
-    position: relative;
-    padding: 0;
-    display: block;
-    top: 0;
-    left: 0;
-    height: 48px;
-    width: 48px;
-    background: transparent;
+.mat-list-item-content{
+    flex-direction: column;
+}
+.item{
+    width: 100%;
+    display: flex;
+}
+
+.sub-menu{
+    display: flex;
+    flex-direction: column;
+
 }

@@ -1,11 +1,12 @@
-<mat-sidenav-container>
+<mat-sidenav-container class="app-side-nav-container">
   <mat-sidenav 
   #sidenav [opened]="!isNavOver()" 
   [mode]="isNavOver() ? 'over' : 'side'" 
+  class="sidebar-panel"
   >
-  <div id="scroll-area" fxLayout="column">
+  <div id="scroll-area" class="navigation-hold">
       <!-- App Logo -->
-      <div class="branding">
+      <div class="branding default-bg">
           <img src="assets/images/logo/logo.png" alt="" class="app-logo">
           <!-- Two different logos for dark and light themes -->
           <img 
@@ -19,7 +20,9 @@
           class="app-logo-text"
           *ngIf="themeService.activatedThemeName.indexOf('dark') === -1">
       </div>
-      <navigation></navigation>
+      <div class="nav-list-container">
+          <navigation></navigation>
+      </div>
     </div>
   </mat-sidenav>
 </mat-sidenav-container>
