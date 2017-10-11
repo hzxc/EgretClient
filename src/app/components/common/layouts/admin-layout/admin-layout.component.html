@@ -1,28 +1,34 @@
 <mat-sidenav-container class="app-side-nav-container">
-  <mat-sidenav 
-  #sidenav [opened]="!isNavOver()" 
-  [mode]="isNavOver() ? 'over' : 'side'" 
-  class="sidebar-panel"
-  >
-  <div id="scroll-area" class="navigation-hold">
-      <!-- App Logo -->
-      <div class="branding default-bg">
-          <img src="assets/images/logo/logo.png" alt="" class="app-logo">
-          <!-- Two different logos for dark and light themes -->
-          <img 
-          src="assets/images/logo/logo-text-white.png" 
-          alt="" 
-          class="app-logo-text"
-          *ngIf="themeService.activatedThemeName.indexOf('dark') !== -1">
-          <img 
-          src="assets/images/logo/logo-text.png" 
-          alt="" 
-          class="app-logo-text"
-          *ngIf="themeService.activatedThemeName.indexOf('dark') === -1">
+    <!-- Main side navigation -->
+    <mat-sidenav 
+    #sidenav [opened]="!isNavOver()" 
+    [mode]="isNavOver() ? 'over' : 'side'" 
+    class="sidebar-panel">
+      <div id="scroll-area" class="navigation-hold" fxLayout="column">
+        <!-- App Logo -->
+        <div class="branding default-bg">
+            <img src="assets/images/logo/logo.png" alt="" class="app-logo">
+            <!-- Two different logos for dark and light themes -->
+            <img 
+            src="assets/images/logo/logo-text-white.png" 
+            alt="" 
+            class="app-logo-text"
+            *ngIf="themeService.activatedThemeName.indexOf('dark') !== -1">
+            <img 
+            src="assets/images/logo/logo-text.png" 
+            alt="" 
+            class="app-logo-text"
+            *ngIf="themeService.activatedThemeName.indexOf('dark') === -1">
+        </div>
+        <!-- Navigation -->
+        <navigation></navigation>
       </div>
-      <div class="nav-list-container">
-          <navigation></navigation>
-      </div>
-    </div>
-  </mat-sidenav>
-</mat-sidenav-container>
+    </mat-sidenav>
+
+    <topbar 
+    [sidenav]="sidenav" 
+    (onLangChange)="translate.use($event)"></topbar>
+  
+  <!-- Only of demo purpose -->
+  <!-- Remove this from your production version -->
+  <!-- <app-customizer [breadcrumb]="breadcrumb"></app-customizer> -->

@@ -21,7 +21,6 @@ import {
   MatCheckboxModule,
   MatCardModule
 } from '@angular/material';
-// import { TopbarComponent } from './topbar/topbar.component';
 // import { NotificationsComponent } from './notifications/notifications.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 // import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
@@ -29,6 +28,7 @@ import { CommonDirectivesModule } from '../../directives/common/common-directive
 import { ThemeService } from '../../services/theme/theme.service';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavigationService } from '../../services/navigation/navigation.service';
+import { TopbarComponent } from './topbar/topbar.component';
 // import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
@@ -59,7 +59,7 @@ import { NavigationService } from '../../services/navigation/navigation.service'
     AdminLayoutComponent,
     NavigationComponent,
     // AuthLayoutComponent,
-    // TopbarComponent,
+    TopbarComponent,
     // NotificationsComponent, BreadcrumbComponent
   ],
   providers: [ThemeService,NavigationService],

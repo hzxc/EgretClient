@@ -203,9 +203,19 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/jquery@*", "@types/jquery@^3.2.13":
+  version "3.2.13"
+  resolved "http://r.cnpmjs.org/@types/jquery/download/@types/jquery-3.2.13.tgz#1600dac44c79d52dab2b4361551bc6554f525972"
+
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.89"
   resolved "http://r.cnpmjs.org/@types/node/download/@types/node-6.0.89.tgz#154be0e6a823760cd6083aa8c48f952e2e63e0b0"
+
+"@types/perfect-scrollbar@^0.7.0":
+  version "0.7.0"
+  resolved "http://r.cnpmjs.org/@types/perfect-scrollbar/download/@types/perfect-scrollbar-0.7.0.tgz#6442d8f8d0f04c3306111e50a4b500d4f3dc948f"
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -2830,6 +2840,10 @@ jasmine@^2.5.3:
 jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "http://r.cnpmjs.org/jasminewd2/download/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
+
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "http://r.cnpmjs.org/jquery/download/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-base64@^2.1.5, js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.3.2"

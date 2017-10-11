@@ -213,7 +213,7 @@ code {
 .light-gray {
     background: rgba(0, 0, 0, .024);
 }
-.light-md-gray {
+.light-mat-gray {
     background: rgba(0, 0, 0, .08);
 }
 .mat-blue {
@@ -352,24 +352,24 @@ code {
     font-weight: 400 !important;
 }
 
-.mat-icon-button[md-sm-button] {
+.mat-icon-button[mat-sm-button] {
     height: 24px;
     width: 24px;
     line-height: 24px;
 }
 
-.mat-icon-button[md-xs-button] {
+.mat-icon-button[mat-xs-button] {
     height: 20px;
     width: 20px;
     line-height: 20px;
 }
-.mat-icon-button[md-xs-button] .mat-icon {
+.mat-icon-button[mat-xs-button] .mat-icon {
     font-size: 16px;
     line-height: 20px !important;
     height: 20px;
     width: 20px;
 }
-.mat-chip[md-sm-chip] {
+.mat-chip[mat-sm-chip] {
     padding: 4px 6px 4px 6px !important;
     border-radius: 4px !important;
     font-size: 12px !important;
@@ -428,8 +428,8 @@ code {
     width: 40px !important;
     border-radius: 50%;
 }
-.toolbar-avatar.md,
-.toolbar-avatar.md > img {
+.toolbar-avatar.mat,
+.toolbar-avatar.mat > img {
     width: 48px !important;
     height: 48px;
 }
@@ -583,11 +583,11 @@ code {
 
 /*---- Third pirty adjust -----*/
 /*--------- Material ---------*/
-md-list a[md-list-item] .mat-list-item-content, 
-md-list md-list-item .mat-list-item-content, 
-md-nav-list a[md-list-item] .mat-list-item-content, 
-md-nav-list md-list-item .mat-list-item-content,
-[md-menu-item],
+mat-list a[mat-list-item] .mat-list-item-content, 
+mat-list mat-list-item .mat-list-item-content, 
+mat-nav-list a[mat-list-item] .mat-list-item-content, 
+mat-nav-list mat-list-item .mat-list-item-content,
+[mat-menu-item],
 .mat-option, 
 body .mat-select-trigger {
     font-size: .875rem !important;
@@ -993,7 +993,7 @@ div.hopscotch-bubble .hopscotch-nav-button.prev:hover {
     padding: 0 16px 0 0;
     z-index: 99;
 }
-.sidebar-panel.mat-sidenav .sidebar-list-item md-icon:not(.menu-caret) {
+.sidebar-panel.mat-sidenav .sidebar-list-item mat-icon:not(.menu-caret) {
     text-align: center;
     margin-right: 3px;
     height: 48px;
@@ -1002,14 +1002,14 @@ div.hopscotch-bubble .hopscotch-nav-button.prev:hover {
     border-left: 3px solid;
     border-color: transparent;
 }
-.sidebar-panel.mat-sidenav .sidebar-list-item md-icon.menu-caret {
+.sidebar-panel.mat-sidenav .sidebar-list-item mat-icon.menu-caret {
     float: right;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     -webkit-transition: all .3s cubic-bezier(.35,0,.25,1);
     transition: all .3s cubic-bezier(.35,0,.25,1);
 }
-.sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon.menu-caret {
+.sidebar-panel.mat-sidenav .sidebar-list-item.open mat-icon.menu-caret {
     float: right;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
